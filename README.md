@@ -1,7 +1,4 @@
-Your virtual Companion for boring tasks like homework or fun things like gaming! Change the way you look at the boring stuff and make the fun stuff even better!
-
-
-# (ಠ‿↼) <u>Why should I want a Compa?</u>
+# (ಠ‿↼) <u>What's a Compa and why should I want one?</u>
 <p>
 Compa was designed to make boring experience's more fun! Compa brings a way to gamify the boring experience and turn it into a fun way to stay on track.
 
@@ -16,7 +13,7 @@ So, try a Compa today and never look at the boring stuff the same!
 
 
 &nbsp;
-# ¯\\_(ಠᗝಠ)_/¯ <u>REQUIREMENTS</u>
+# ¯\\_(ಠᗝಠ)_/¯ <u>Requirements</u>
 > <ol>
 > <li>Main App: Windows OS</li>
 > <li>GameWiki feature:</li>
@@ -32,14 +29,14 @@ So, try a Compa today and never look at the boring stuff the same!
 
 
 &nbsp;
-# (づ▰◞ ▰)づ <u>RUNNING</u>
+# (づ▰◞ ▰)づ <u>Running</u>
 > Open Compa.exe
 
 
 
 
 &nbsp;
-# └[ꗞロꗞ]┘ <u>HOW IT WORKS</u>
+# └[ꗞロꗞ]┘ <u>How it works</u>
 
 <u>**Mood, age and generation**</u><br>
 > Compa.exe runs checks periodically in the background for predefined apps.
