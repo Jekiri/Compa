@@ -137,13 +137,8 @@ So, try a Compa today and never look at the boring stuff the same!
 	</ul>
 
 &nbsp;
-<li>Closing loading screen before naming Compa will proceed to main application with no name</li>
-	<ol>
-	<li>Loading screen will hang until closed again to proceed or, Compa is named.</li>
-		<ol>
-			<li>Will still open to main screen but, will break features and your Compa won't have a name.. Who wants that!?</li>
-		</ol>
-	</ol>
+<li>Closing loading screen before naming Compa will break app</li>
+
 		
 
 &nbsp;
