@@ -21,7 +21,7 @@ So, try a Compa today and never look at the boring stuff the same!
 > <li>Main App: Windows OS</li>
 > <li>GameWiki feature:</li>
 > 	<ul>
-> 		<li>Recommended: GoogleChrome<i> - Will only <b>auto open</b> wiki page on Chrome. More browser support to come in near future<i></li>
+> 		<li>Recommended: GoogleChrome<i> - Will only <b>auto open</b> wiki page on Chrome. More browser support to come in near future</i></li>
 > 		<ul>	
 > 			<li><i>GameWiki feature will attempt to use Chrome first, if chrome does not exist on machine, will use default host machine web browser instead.</i></li>
 > 		</u>
