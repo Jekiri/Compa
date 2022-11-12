@@ -1,4 +1,7 @@
-# (ಠ‿↼) <u>What's a Compa and why should I want one?</u>
+Your virtual Companion for boring tasks like homework or fun things like gaming! Change the way you look at the boring stuff and make the fun stuff even better!
+
+
+# (ಠ‿↼) <u>Why should I want a Compa?</u>
 <p>
 Compa was designed to make boring experience's more fun! Compa brings a way to gamify the boring experience and turn it into a fun way to stay on track.
 
@@ -13,14 +16,14 @@ So, try a Compa today and never look at the boring stuff the same!
 
 
 &nbsp;
-# ¯\\_(ಠᗝಠ)_/¯ <u>Requirements</u>
+# ¯\\_(ಠᗝಠ)_/¯ <u>REQUIREMENTS</u>
 > <ol>
 > <li>Main App: Windows OS</li>
 > <li>GameWiki feature:</li>
 > 	<ul>
 > 		<li>Recommended: GoogleChrome<i> - Will only <b>auto open</b> wiki page on Chrome. More browser support to come in near future<i></li>
 > 		<ul>	
-> 			<li><i>GameWiki feature will attempt to use Chrome first, if chrome does not exist on machine, will use default host machine web browser instead.<i></li>
+> 			<li><i>GameWiki feature will attempt to use Chrome first, if chrome does not exist on machine, will use default host machine web browser instead.</i></li>
 > 		</u>
 > 	</ul>
 > </ol>
@@ -29,19 +32,20 @@ So, try a Compa today and never look at the boring stuff the same!
 
 
 &nbsp;
-# (づ▰◞ ▰)づ <u>Running</u>
+# (づ▰◞ ▰)づ <u>RUNNING</u>
 > Open Compa.exe
 
 
 
 
 &nbsp;
-# └[ꗞロꗞ]┘ <u>How it works</u>
+# └[ꗞロꗞ]┘ <u>HOW IT WORKS</u>
 
 <u>**Mood, age and generation**</u><br>
-> Compa.exe runs checks periodically in the background for predefined apps.
-> $\qquad$<i>The predefined apps are Steam and Word.</i>
+> Compa.exe runs checks periodically in the background for predefined apps.\
+> $\qquad$<i>The predefined apps are Steam and Word.</i>\
 > $\qquad$<i>Please note: any custom linked apps will be included into this check</i>
+> 
 > &nbsp;
 > These checks influence the mood of your Compa
 > If your Compa dies, the generation will increase by 1.
@@ -116,7 +120,7 @@ So, try a Compa today and never look at the boring stuff the same!
 &nbsp;
 # (ง☉Д☉)ง <u>Important notes</u>
 <ul>
-	<li><b>If you are using Chrome: </b>Please allow for the GameWiki feature to open the webpage before clicking away as this can cause issues.</li>
+	<li><b>If you are using Chrome: </b>Please allow for the GameWiki feature to open the webpage before clicking away as this can cause issues.</li><br>
 	<i>Please note this feature should not take longer than 3 seconds to fully complete.</i>
 </ul>
 
@@ -188,5 +192,3 @@ So, try a Compa today and never look at the boring stuff the same!
 			</ol>
 		</ul>
 </ul>
-
-
