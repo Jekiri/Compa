@@ -1,11 +1,11 @@
-#Default python modules
+#Default modules
 import random
 import math
 import time
 import subprocess
 import sys
 import os
-#Additional python modules
+#Additional modules
 import tkinter as tk
 from tkinter import font
 from tkinter import StringVar
