@@ -53,7 +53,7 @@ So, try a Compa today and never look at the boring stuff the same!
 &nbsp;
 <u>**Points**</u><br>
 > Points are influenced by your Compa's mood, age & generation!
-> Earn points by having applications that are linked to your Compa open, to gain points over time or, Play/Feed or put your Compa to sleep for a small point increase and a temporary mood increase!
+> Earn points by having applications that are linked to your Compa, open in order to increase your Compa's mood, to gain points over time or, Play/Feed or put your Compa to sleep for a small point increase and a temporary mood increase!
 
 
 
