@@ -203,7 +203,7 @@ def to_VIP_or_to_not_VIP():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag8 is 1 - VIP title active")
+        print("Flag8 is active - VIP title unlocked")
         main_window.title("[VIP] - " + ndata)
     else:
         main_window.title(ndata)
@@ -357,7 +357,7 @@ def mood_function(mood):
             main_window.destroy()
             startupinfo = subprocess.STARTUPINFO()
             startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            subprocess.Popen("python3 Compa.pyw", startupinfo=startupinfo)
+            subprocess.Popen("Compa.exe", startupinfo=startupinfo)
         with open ("Brain\\Bin\\nameraw.txt") as f:
             name = f.read()
             f.close()
@@ -378,14 +378,14 @@ def mood_function(mood):
     int(mood)
     if mood_increasev == False:
         if mood != 0:
-            if mood >= 600:
+            if mood >= 3200:
                 sad = False
                 happy = False
                 pumped = False
                 enlightened = True
                 mood_display.set("Mood: " + "Enlightened")
                 print("Max mood achieved, points awarded. Mood reset to Happy")
-                mood = 200
+                mood = 650
                 mood_file = open("Brain\\Bin\\moodraw.txt", "r+")
                 mood_file.write(str(mood))
                 mood_file.close()
@@ -393,19 +393,19 @@ def mood_function(mood):
                 points = int(points)
                 earn_points_bulk()
                 popup_window()
-            elif mood >= 500 and mood < 600:
+            elif mood >= 2400 and mood < 3200:
                 sad = False
                 happy = False
                 pumped = False
                 enlightened = True
                 mood_display.set("Mood: " + "Enlightened")
                 print(str(ndata)+" is enlightened")
-                mood = mood - 1
+                mood = mood - 8
                 print("Updated Mood:"+ str(mood))
                 main_window.update()
                 main_window.after(25000, mood_function, mood)
                 main_window.after(20000, app_checker)
-            elif mood >= 300 and mood < 500:
+            elif mood >= 1800 and mood < 2400:
                 sad = False
                 happy = False
                 enlightened = False
@@ -416,7 +416,7 @@ def mood_function(mood):
                 main_window.update()
                 main_window.after(25000, mood_function, mood)
                 main_window.after(20000, app_checker)
-            elif mood <= 100 and mood > 0:
+            elif mood <= 600 and mood > 0:
                 pumped = False
                 happy = False
                 enlightened = False
@@ -451,19 +451,19 @@ def mood_function(mood):
             int(generation)
             mood = mood - 1
             print("Updated Mood:"+ str(mood))
-            mood = 200 #Reset mood
+            mood = 650 #Reset mood
             print("Updated Mood:"+ str(mood))
             main_window.after(30000, mood_function, mood)
     elif mood_increasev == True:
         if mood != 0:
-            if mood >= 600:
+            if mood >= 3200:
                 sad = False
                 happy = False
                 pumped = False
                 enlightened = True
                 mood_display.set("Mood: " + "Enlightened")
                 print("Max mood achieved, points awarded. Mood reset to Happy")
-                mood = 200
+                mood = 650
                 mood_file = open("Brain\\Bin\\moodraw.txt", "r+")
                 mood_file.write(str(mood))
                 mood_file.close()
@@ -481,7 +481,7 @@ def mood_function(mood):
                     main_window.destroy()
                     startupinfo = subprocess.STARTUPINFO()
                     startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-                    subprocess.Popen("python3 Compa.pyw", startupinfo=startupinfo)
+                    subprocess.Popen("Compa.exe", startupinfo=startupinfo)
                 with open ("Brain\\Bin\\nameraw.txt") as f:
                     name = f.read()
                     f.close()
@@ -491,7 +491,7 @@ def mood_function(mood):
                 B1.place(relx=0.5, rely=0.6, anchor=tk.CENTER)
                 mood_increasev = False
                 popup.mainloop()
-            elif mood >= 500 and mood < 600:
+            elif mood >= 2400 and mood < 3200:
                 sad = False
                 happy = False
                 pumped = False
@@ -500,31 +500,31 @@ def mood_function(mood):
                 print(str(ndata)+" is enlightened")
                 mood = mood + 1
                 print("Updated Mood(+):"+ str(mood))
-                earn_points_single(10)
+                earn_points_single(3)
                 main_window.update()
                 main_window.after(25000, mood_function, mood)
                 main_window.after(20000, app_checker)
                 mood_increasev = False
-            elif mood >= 300 and mood < 500:
+            elif mood >= 1800 and mood < 2400:
                 sad = False
                 happy = False
                 enlightened = False
                 pumped = True
                 mood_display.set("Mood(+): " + "Pumped")
-                mood = mood + 3
+                mood = mood + random.randint(1,3)
                 print("Updated Mood(+):"+ str(mood))
-                earn_points_single(5)
+                earn_points_single(2)
                 main_window.update()
                 main_window.after(25000, mood_function, mood)
                 main_window.after(20000, app_checker)
                 mood_increasev = False
-            elif mood <= 100 and mood > 0:
+            elif mood <= 600 and mood > 0:
                 pumped = False
                 happy = False
                 enlightened = False
                 sad = True
                 mood_display.set("Mood(+): " + "Sad")
-                mood = mood + random.randint(5,10)
+                mood = mood + random.randint(3,5)
                 print("Updated Mood(+):"+ str(mood))
                 main_window.update()
                 main_window.after(25000, mood_function, mood)
@@ -536,9 +536,9 @@ def mood_function(mood):
                 enlightened = False
                 happy = True
                 mood_display.set("Mood(+): " + "Happy")
-                mood = mood + 5
+                mood = mood + random.randint(2,5)
                 print("Updated Mood(+):"+ str(mood))
-                earn_points_single(3)
+                earn_points_single(1)
                 main_window.update()
                 main_window.after(25000, mood_function, mood)
                 main_window.after(20000, app_checker)
@@ -556,7 +556,7 @@ def mood_function(mood):
             int(generation)
             mood = mood - 1 #This is to make sure the mood doesn't go up again
             print("Updated Mood:"+ str(mood))
-            mood = 200 #Reset mood
+            mood = 650 #Reset mood
             print("Updated Mood(+):"+ str(mood) +"Mood reset to Happy")
             main_window.after(30000, mood_function, mood)
     else:
@@ -636,11 +636,11 @@ def app_link_window():
 
 
 def app_checker_word():
-    if "word.exe" in (i.name() for i in psutil.process_iter()):
-        print("word is running")
+    if "word.exe" in (i.name() for i in psutil.process_iter()) or "WINWORD.exe" in (i.name() for i in psutil.process_iter()):
+        print("Word is running")
         Mincreaser_G()
     else:
-        print("word is not running")
+        print("Word is not running")
 
 game_open = False
 
@@ -659,7 +659,7 @@ def app_checker_steam():
             print(game.name + " is running")
             game_open = True
         except:
-            print("Steam game is not running")
+            print("Steam is open but, no game is running")
             game_open = False
     else:
         print("Steam is not running")
@@ -688,7 +688,7 @@ def app_checker_placeholder1():
             print(app_name + " is running")
             Mincreaser_G()
         else:
-            print("App 1 linked but not running")
+            print("No App_1 linked")
 
 
 def app_checker_placeholder2():
@@ -761,22 +761,6 @@ def earn_points_single(amount):
     print("Updated Points: " + str(points))
 
 
-def earn_points():
-    try:
-        global points
-        points = int(points)
-        points = points + 1
-        points_file = open("Brain\\Bin\\pointsraw.txt", "r+")
-        points_file.write(str(points))
-        points_file.close()
-        print("Updated Points: " + str(points))
-        
-    except ZeroDivisionError:
-        pass
-    
-    #1/2 hour timer
-    main_window.after(1800000, earn_points) #1800000 ms = 30 minutes
-
     
 
 #/------------------------------End of points function-------------------------------------\
@@ -789,10 +773,10 @@ def flag_checker():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag1 is 1 - App linker active")
+        print("Flag1 is active - App linker unlocked")
         app_linker_unlocked = True
     else:
-        print("Flag is 0")
+        print("Flag1 is not active")
 
 def flag_checkerB():
     button_sound()
@@ -802,7 +786,7 @@ def flag_checkerB():
     if flag == "1":
         app_link_window()
     else:
-        print("Flag is 0")
+        print("Flag1 is not active")
 
 def flag_checker2():
     global green_compa_unlocked
@@ -810,11 +794,11 @@ def flag_checker2():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag2 is 1 - Green compa active")
+        print("Flag2 is active - Green compa unlocked")
         green_compa_unlocked = True
         w2.configure(fg="#009f66")
     else:
-        print("Flag2 is 0")
+        print("Flag2 is not active")
 
 
 def flag_checker2B():
@@ -825,11 +809,11 @@ def flag_checker2B():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag2 is 1 - Green compa active")
+        print("Flag2 is active - Green compa unlocked")
         green_compa_unlocked = True
         w2.configure(fg="#009f66")
     else:
-        print("Flag2 is 0")
+        print("Flag2 is not active")
 
 def flag_checker3():
     global purple_compa_unlocked
@@ -837,11 +821,11 @@ def flag_checker3():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag3 is 1 - Purple compa active")
+        print("Flag3 is active - Purple compa unlocked")
         purple_compa_unlocked = True
         w2.configure(fg="#a200a7")
     else:
-        print("Flag3 is 0")
+        print("Flag3 is not active")
 
 def flag_checker3B():
     global purple_compa_unlocked
@@ -851,11 +835,11 @@ def flag_checker3B():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag3 is 1 - Purple compa active")
+        print("Flag3 is active - Purple compa unlocked")
         purple_compa_unlocked = True
         w2.configure(fg="#a200a7")
     else:
-        print("Flag3 is 0")
+        print("Flag3 is not active")
 
 def flag_checker4():
     global blue_compa_unlocked
@@ -863,11 +847,11 @@ def flag_checker4():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag4 is 1 - Blue compa active")
+        print("Flag4 is active - Blue compa unlocked")
         blue_compa_unlocked = True
         w2.configure(fg="#3c8ad1")
     else:
-        print("Flag4 is 0")
+        print("Flag4 is not active")
 
 def flag_checker4B():
     global blue_compa_unlocked
@@ -877,11 +861,11 @@ def flag_checker4B():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag4 is 1 - Blue compa active")
+        print("Flag4 is active - Blue compa unlocked")
         blue_compa_unlocked = True
         w2.configure(fg="#3c8ad1")
     else:
-        print("Flag4 is 0")
+        print("Flag4 is not active")
 
 def flag_checker5():
     global feeder_unlocked
@@ -889,10 +873,10 @@ def flag_checker5():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag5 is 1 - Feeder active")
+        print("Flag5 is active - Feeder unlocked")
         feeder_unlocked = True
     else:
-        print("Flag5 is 0")
+        print("Flag5 is not active")
 
 def flag_checker5B():
     reward_sound()
@@ -900,13 +884,13 @@ def flag_checker5B():
         flag = f.read()
         f.close()
     if flag == "1":
-        earn_points_single(3)
+        earn_points_single(1)
         Mincreaser_G()
-        print("Mmmm Num-Num-Num...3 points have been awarded.")
+        print("Mmmm Num-Num-Num... --> points awarded")
         button1_3_action()
         
     else:
-        print("Flag5 is 0")
+        print("Flag5 is not active")
 
 def flag_checker6():
     global playing_unlocked
@@ -914,10 +898,10 @@ def flag_checker6():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag6 is 1 - Playing button active")
+        print("Flag6 is active - Play button unlocked")
         playing_unlocked = True
     else:
-        print("Flag6 is 0")
+        print("Flag6 is not active")
 
 
 def flag_checker6B():
@@ -926,12 +910,12 @@ def flag_checker6B():
         flag = f.read()
         f.close()
     if flag == "1":
-        earn_points_single(5)
+        earn_points_single(2)
         Mincreaser_G()
-        print("Yay!! I love swimming! *SPLISH* *SPLASH* Woooo!! *SPLISH* *SPLISH* --> 5 points awarded")
+        print("Yay!! I love swimming! *SPLISH* *SPLASH* Woooo!! *SPLISH* *SPLISH* --> points awarded")
         button2_3_action()
     else:
-        print("Flag6 is 0")
+        print("Flag6 is not active")
 
 
 def flag_checker7():
@@ -940,10 +924,10 @@ def flag_checker7():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag7 is 1 - Nap button active")
+        print("Flag7 is active - Nap button unlocked")
         sleeping_unlocked = True
     else:
-        print("Flag7 is 0")
+        print("Flag7 is not active")
 
 def flag_checker7B():
     reward_sound()
@@ -951,11 +935,12 @@ def flag_checker7B():
         flag = f.read()
         f.close()
     if flag == "1":
+        earn_points_single(3)
         Mincreaser_G()
-        print("ZZZZZZZzzzzzzzz......ZZZZZZZzzzzzzzz......")
+        print("ZZZZZZZzzzzzzzz......ZZZZZZZzzzzzzzz...... --> points awarded")
         button3_3_action()
     else:
-        print("Flag7 is 0")
+        print("Flag7 is not active")
 
 def flag_checker8():
     global VIP_unlocked
@@ -963,11 +948,11 @@ def flag_checker8():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag8 is 1 - VIP button active")
+        print("Flag8 is active - VIP button unlocked")
         VIP_unlocked = True
         w2.configure(fg="#15EEE6")
     else:
-        print("Flag8 is 0")
+        print("Flag8 is not active")
 
 def flag_checker8B():
     global VIP_unlocked
@@ -984,7 +969,7 @@ def flag_checker8B():
         popup.resizable(False, False)
         popup.overrideredirect(True)
         def yes():
-            print("Flag8 is 1 - VIP button active")
+            print("Flag8 is active - VIP button unlocked")
             w2.configure(fg="#15EEE6")
             button_sound()
             popup.destroy()
@@ -992,7 +977,7 @@ def flag_checker8B():
             main_window.destroy()
             startupinfo = subprocess.STARTUPINFO()
             startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            subprocess.Popen("python3 Compa.pyw", startupinfo=startupinfo)
+            subprocess.Popen("Compa.exe", startupinfo=startupinfo)
         
         def no():
             button_sound()
@@ -1009,7 +994,7 @@ def flag_checker8B():
         popup.mainloop()
 
     else:
-        print("Flag8 is 0")
+        print("Flag8 is not active")
 
 def flag_checker9():
     global game_wiki_unlocked
@@ -1017,10 +1002,10 @@ def flag_checker9():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag9 is 1 - Wiki button active")
+        print("Flag9 is active - Wiki button unlocked")
         game_wiki_unlocked = True
     else:
-        print("Flag9 is 0")
+        print("Flag9 is not active")
 
 def flag_checker9B():
     global game_wiki_unlocked
@@ -1029,11 +1014,11 @@ def flag_checker9B():
         flag = f.read()
         f.close()
     if flag == "1":
-        print("Flag9 is 1 - Wiki button active")
+        print("Flag9 is active - Wiki button unlocked")
         game_wiki_unlocked = True
         button3_action()
     else:
-        print("Flag9 is 0")
+        print("Flag9 is not active")
 
 green_compa_unlocked = False
 purple_compa_unlocked = False
@@ -1051,7 +1036,7 @@ def button1_active():
         points = points_file.read()
         points_file.close()
         points = int(points)
-        cost = 200
+        cost = 500
         cost_display.set("Cost:"+str(cost))
         if points >= cost: 
             popup = customtkinter.CTk()
@@ -1065,7 +1050,7 @@ def button1_active():
                 button_sound()
                 global app_linker_unlocked
                 global points
-                points = points - cost
+                points = int(points) - int(cost)
                 points_file = open("Brain\\Bin\\pointsraw.txt", "r+")
                 points_file.write(str(points))
                 points_file.close()
@@ -1103,7 +1088,7 @@ def button2_active():
         points = points_file.read()
         points_file.close()
         points = int(points)
-        cost = 800
+        cost = 1000
         cost_display.set("Cost:"+str(cost))
         if points >= cost: 
             popup = customtkinter.CTk()
@@ -1117,7 +1102,7 @@ def button2_active():
                 button_sound()
                 global VIP_unlocked
                 global points
-                points = points - cost
+                points = int(points) - int(cost)
                 points_file = open("Brain\\Bin\\pointsraw.txt", "r+")
                 points_file.write(str(points))
                 points_file.close()
@@ -1156,7 +1141,7 @@ def button3_active():
         points = points_file.read()
         points_file.close()
         points = int(points)
-        cost = 300
+        cost = 800
         cost_display.set("Cost:"+str(cost))
         if points >= cost: 
             popup = customtkinter.CTk()
@@ -1170,7 +1155,7 @@ def button3_active():
                 button_sound()
                 global game_wiki_unlocked
                 global points
-                points = points - cost
+                points = int(points) - int(cost)
                 points_file = open("Brain\\Bin\\pointsraw.txt", "r+")
                 points_file.write(str(points))
                 points_file.close()
@@ -1228,7 +1213,7 @@ def button1_2_active():
         points = points_file.read()
         points_file.close()
         points = int(points)
-        cost = 75
+        cost = 350
         cost_display.set("Cost:"+str(cost))
         if points >= cost:
             popup = customtkinter.CTk()
@@ -1242,11 +1227,10 @@ def button1_2_active():
                 button_sound()
                 global green_compa_unlocked
                 global points
-                points = points - cost
+                points = int(points) - int(cost)
                 points_file = open("Brain\\Bin\\pointsraw.txt", "r+")
                 points_file.write(str(points))
                 points_file.close()
-                w2.configure(fg="#009f66")
                 points_window_display.set("You have unlocked the ability to turn you Compa green.")
                 green_compa_unlocked = True
                 #save flag to file
@@ -1281,7 +1265,7 @@ def button2_2_active():
         points = points_file.read()
         points_file.close()
         points = int(points)
-        cost = 75
+        cost = 350
         cost_display.set("Cost:"+str(cost))
         if points >= cost:
             popup = customtkinter.CTk()
@@ -1295,11 +1279,10 @@ def button2_2_active():
                 button_sound()
                 global purple_compa_unlocked
                 global points
-                points = points - cost
+                points = int(points) - int(cost)
                 points_file = open("Brain\\Bin\\pointsraw.txt", "r+")
                 points_file.write(str(points))
                 points_file.close()
-                w2.configure(fg="#a200a7")
                 points_window_display.set("You have unlocked the ability to turn you Compa purple.")
                 purple_compa_unlocked = True
                 #save flag to file
@@ -1333,7 +1316,7 @@ def button3_2_active():
         points = points_file.read()
         points_file.close()
         points = int(points)
-        cost = 75
+        cost = 350
         cost_display.set("Cost:"+str(cost))
         if points >= cost:
             popup = customtkinter.CTk()
@@ -1347,11 +1330,10 @@ def button3_2_active():
                 button_sound()
                 global blue_compa_unlocked
                 global points
-                points = points - cost
+                points = int(points) - int(cost)
                 points_file = open("Brain\\Bin\\pointsraw.txt", "r+")
                 points_file.write(str(points))
                 points_file.close()
-                w2.configure(fg="#3c8ad1")
                 points_window_display.set("You have unlocked the ability to turn you Compa blue.")
                 blue_compa_unlocked = True
                 #save flag to file
@@ -1387,7 +1369,7 @@ def button1_3_active():
         points = points_file.read()
         points_file.close()
         points = int(points)
-        cost = 75
+        cost = 200
         cost_display.set("Cost:"+str(cost))
         if points >= cost:
             popup = customtkinter.CTk()
@@ -1401,7 +1383,7 @@ def button1_3_active():
                 button_sound()
                 global feeder_unlocked
                 global points
-                points = points - cost
+                points = int(points) - int(cost)
                 points_file = open("Brain\\Bin\\pointsraw.txt", "r+")
                 points_file.write(str(points))
                 points_file.close()
@@ -1466,7 +1448,7 @@ def button2_3_active():
         points = points_file.read()
         points_file.close()
         points = int(points)
-        cost = 75
+        cost = 300
         cost_display.set("Cost:"+str(cost))
         if points >= cost:
             popup = customtkinter.CTk()
@@ -1480,7 +1462,7 @@ def button2_3_active():
                 button_sound()
                 global playing_unlocked
                 global points
-                points = points - cost
+                points = int(points) - int(cost)
                 points_file = open("Brain\\Bin\\pointsraw.txt", "r+")
                 points_file.write(str(points))
                 points_file.close()
@@ -1551,7 +1533,7 @@ def button3_3_active():
         points = points_file.read()
         points_file.close()
         points = int(points)
-        cost = 75
+        cost = 400
         cost_display.set("Cost:"+str(cost))
         if points >= cost:
             popup = customtkinter.CTk()
@@ -1565,7 +1547,7 @@ def button3_3_active():
                 button_sound()
                 global sleeping_unlocked
                 global points
-                points = points - cost
+                points = int(points) - int(cost)
                 points_file = open("Brain\\Bin\\pointsraw.txt", "r+")
                 points_file.write(str(points))
                 points_file.close()
@@ -2003,7 +1985,6 @@ generation_display.set("Generation:" + "Calculating...")
 w3.after(5001, startup_noise)
 w3.after(5000, mood_function, mood)
 w4.after(1500000, age_increaser) #1500000 ms = 25 minutes
-main_window.after(1800000, earn_points) #1800000 ms = 30 minutes
 main_window.after(5000, body_function)
 
 app_checker()
