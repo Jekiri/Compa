@@ -18,7 +18,6 @@ import webbrowser
 import pyautogui
 
 
-## Flag values -> 0 = Not purchased //// 1 = Purchased
 
 
 
