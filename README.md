@@ -45,7 +45,7 @@ So, try a Compa today and never look at the boring stuff the same!
 > Compa.exe runs checks periodically in the background for predefined apps.\
 > $\qquad$<i>The predefined apps are Steam and Word.</i>\
 > $\qquad$<i>Please note: any custom linked apps will be included into this check</i>
-> <br>
+><br>
 > These checks influence the mood of your Compa
 > If your Compa dies, the generation will increase by 1.
 > Your Compa increases in age by 1 every 25 minutes.
