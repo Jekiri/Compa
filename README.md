@@ -1,5 +1,5 @@
 Your virtual Companion for boring tasks like homework or fun things like gaming! Change the way you look at the boring stuff and make the fun stuff even better!
-
+<br>
 
 # (ಠ‿↼) <u>Why should I want a Compa?</u>
 <p>
@@ -129,6 +129,12 @@ So, try a Compa today and never look at the boring stuff the same!
 &nbsp;
 # ╰(𝓞Д𝓞)╯ <u>Known Bugs:</u>
 <ol>
+
+&nbsp;
+<li>Name submit button sometimes has to be clicked twice</li>
+	<ul>
+		<li>To be patched in V.2</li>
+	</ul>
 
 &nbsp;
 <li>Closing loading screen before naming Compa will proceed to main application with no name</li>
