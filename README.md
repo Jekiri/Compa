@@ -34,8 +34,8 @@ So, try a Compa today and never look at the boring stuff the same!
 &nbsp;
 # (づ▰◞ ▰)づ <u>RUNNING</u>
 > Open Compa.exe
-
-
+> $\qquad$<i>Please do not remove the application from the main folder. This will result in a catastrophic failure.</i>
+> $\qquad$<i>If you wish to move the application for easier access, please create a shortcut and move the shortcut.</i>
 
 
 &nbsp;
