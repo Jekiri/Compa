@@ -131,12 +131,6 @@ So, try a Compa today and never look at the boring stuff the same!
 <ol>
 
 &nbsp;
-<li>Name submit button sometimes has to be clicked twice</li>
-	<ul>
-		<li>To be patched in V.2</li>
-	</ul>
-
-&nbsp;
 <li>Closing loading screen before naming Compa will break app</li>
 
 		
